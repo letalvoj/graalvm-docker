@@ -10,4 +10,4 @@ RUN wget https://github.com/oracle/graal/releases/download/vm-${GRAAL_VERSION}/g
 RUN tar -xvzf graalvm-ce-${GRAAL_VERSION}-linux-amd64.tar.gz && \
     rm graalvm-ce-${GRAAL_VERSION}-linux-amd64.tar.gz
 
-ENV PATH=/graalvm-${GRAAL_VERSION}/bin:$PATH
+ENV PATH=/graalvm-ce-${GRAAL_VERSION}/bin:$PATH
