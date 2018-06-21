@@ -10,4 +10,8 @@ RUN wget https://github.com/oracle/graal/releases/download/vm-${GRAAL_VERSION}/g
     tar -xvzf graalvm-ce-${GRAAL_VERSION}-linux-amd64.tar.gz && \
     rm graalvm-ce-${GRAAL_VERSION}-linux-amd64.tar.gz
 
-ENV PATH=/graalvm-ce-${GRAAL_VERSION}/bin:$PATH
+ENV JAVA_HOME=/graalvm-ce-${GRAAL_VERSION}
+ENV JDK_HOME=${JAVA_HOME}
+ENV JRE_HOME=${JAVA_HOME}/jre
+
+ENV PATH=${JAVA_HOME}/bin:$PATH
